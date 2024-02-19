@@ -69,19 +69,31 @@ The API will be accessible at http://localhost:8080.
 - `ta_users_user_id_seq`: Sequence for generating user IDs.
 - `ta_wishlists_wishlist_id_seq`: Sequence for generating wishlist IDs.
 
+## Authentication
+
+Authentication is handled using JWT (JSON Web Token). Users need to include a valid JWT token in the `Authorization` header of the request.
+
+**Note:** When testing the Wishlist endpoints, make sure to include the authentication token in the request header. Add an "Authorization" header with the value Bearer *token* for proper authentication.
 
 
 # Wishlist API
 
 ## API Endpoints
 
-### 1. Create Wishlist
+
+### 1. Register
+**Endpoint:** `POST /api/users/register`
+
+### 2. Login
+**Endpoint:** `POST /api/users/login`
+
+### 3. Create Wishlist
 **Endpoint:** `POST /api/wishlist`
 
-### 2. Get Wishlist
+### 4. Get Wishlist
 **Endpoint:** `GET /api/wishlist`
 
-### 3. Delete Wishlist
+### 5. Delete Wishlist
 **Endpoint** `DELETE /api/wishlist/{wishlistid}`
 
 
